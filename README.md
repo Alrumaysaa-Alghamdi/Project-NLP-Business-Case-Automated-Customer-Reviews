@@ -28,7 +28,6 @@ Group products into broader meta-categories based on their titles, simplifying r
 - Extracted product titles from metadata.
 - Transformed titles using **TF-IDF vectorization**.
 - Applied **K-Means clustering** and tuned the number of clusters using:
-  - **Silhouette Score**
   - **WCSS and Elbow Method**
 - Interpreted top terms in each cluster to assign meaningful names.
 - Saved the vectorizer, KMeans model, and cluster-to-meta-category mapping.
@@ -40,7 +39,7 @@ Group products into broader meta-categories based on their titles, simplifying r
 Generate blog-style recommendation articles for each product category based on customer reviews.
 
 ### **What We Did**:
-- Used GPT-4 from OpenAI to generate natural summaries.
+- Used GPT-3 from OpenAI to generate natural summaries.
 - For each cluster/category:
   - Identified the **top 3 products** (by average rating).
   - Identified the **worst-rated product**.
@@ -56,17 +55,6 @@ Built an interactive dashboard where users can:
 - Classify sentiment of reviews using the trained DistilBERT model.
 - View clustering and top terms.
 - Generate personalized recommendation articles for each cluster.
-
----
-
-## 📁 Folder Structure
-```
-results/
-├── sentiment_model/             # Fine-tuned DistilBERT
-├── tfidf_vectorizer.joblib      # TF-IDF model for product titles
-├── kmeans_model.joblib          # Trained KMeans model
-├── cluster_to_meta.joblib       # Mapping cluster → category
-```
 
 ---
 
